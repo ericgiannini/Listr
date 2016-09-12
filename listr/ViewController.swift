@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
     @IBOutlet weak var tableView: UITableView!
     
     let testOfCustomizedSlot = ["slot1", "slot2", "slot3"]
@@ -23,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        tableViewFromStoryboard.reloadData()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
