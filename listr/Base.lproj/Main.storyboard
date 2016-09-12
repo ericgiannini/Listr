@@ -18,15 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V2-77-rfC">
+                                <rect key="frame" x="258" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-cI-TRa">
+                                <rect key="frame" x="16" y="29" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kz4-DE-x4k">
-                                <rect key="frame" x="-4" y="70" width="328" height="498"/>
+                                <rect key="frame" x="6" y="70" width="308" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customizedSlot" id="dW5-cW-KWS">
-                                        <rect key="frame" x="0.0" y="28" width="328" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="308" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dW5-cW-KWS" id="FMX-53-E2z">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="308" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -36,32 +45,23 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7N2-28-9Bd"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-cI-TRa">
-                                <rect key="frame" x="16" y="29" width="230" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V2-77-rfC">
-                                <rect key="frame" x="258" y="28" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kz4-DE-x4k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="70" id="BNv-RO-uwz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kz4-DE-x4k" secondAttribute="trailing" constant="-20" id="Drh-80-6w0"/>
-                            <constraint firstItem="kz4-DE-x4k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="J6k-QZ-NlY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9V2-77-rfC" secondAttribute="trailing" id="JP1-Nk-33D"/>
+                            <constraint firstItem="kz4-DE-x4k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="Nsa-lz-gnm"/>
+                            <constraint firstItem="kz4-DE-x4k" firstAttribute="top" secondItem="HpC-cI-TRa" secondAttribute="bottom" constant="11" id="bp8-Us-KWn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="HpC-cI-TRa" secondAttribute="leading" id="dOB-B6-Ow7"/>
                             <constraint firstItem="HpC-cI-TRa" firstAttribute="baseline" secondItem="9V2-77-rfC" secondAttribute="baseline" id="dxf-1C-4eB"/>
+                            <constraint firstItem="kz4-DE-x4k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyr-5J-sFE"/>
+                            <constraint firstItem="kz4-DE-x4k" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="faP-HS-Zrb"/>
                             <constraint firstItem="9V2-77-rfC" firstAttribute="leading" secondItem="HpC-cI-TRa" secondAttribute="trailing" constant="12" id="stw-mc-sMZ"/>
                             <constraint firstItem="9V2-77-rfC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vKK-ed-Td0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kz4-DE-x4k" secondAttribute="bottom" id="zz3-2N-NtN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="mh5-TK-HIV" colorLabel="IBBuiltInLabel-Red"/>
                     <connections>
-                        <outlet property="tableViewFromStoryboard" destination="kz4-DE-x4k" id="Aj9-Bj-lca"/>
+                        <outlet property="tableView" destination="kz4-DE-x4k" id="xJP-UD-vrB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
