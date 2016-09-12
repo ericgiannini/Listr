@@ -9,5 +9,13 @@
 import UIKit
 
 class GroceryItem: NSObject {
+    
+    // An empty array of type String for GroceryItems
+    private var items: [String] = []
+    
 
+    // A function for adding GroceryItems to the list
+    func addItem(item: String) {
+        items.append(item)
+    } 
 }
