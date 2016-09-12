@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V2-77-rfC">
                                 <rect key="frame" x="258" y="28" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGz-N2-Cx9"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HpC-cI-TRa">
                                 <rect key="frame" x="16" y="29" width="230" height="30"/>
@@ -61,6 +64,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="mh5-TK-HIV" colorLabel="IBBuiltInLabel-Red"/>
                     <connections>
+                        <outlet property="itemTextField" destination="HpC-cI-TRa" id="GFx-gt-Ch7"/>
                         <outlet property="tableView" destination="kz4-DE-x4k" id="xJP-UD-vrB"/>
                     </connections>
                 </viewController>
