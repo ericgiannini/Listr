@@ -23,6 +23,21 @@ class GroceryItem: NSObject {
 
 extension GroceryItem : UITableViewDataSource {
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("customizedSlot", forIndexPath: indexPath)
+        
+        let item = items[indexPath.row]
+        
+        cell.textLabel!.text = item
+    
+        return cell
+    }
+    
+
     
 }
     
