@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     @IBAction func addButtonPressed(sender: UIButton) {
         
-        guard let text = itemTextField.text else {
+        guard let text = itemTextField.text where !text.isEmpty else {
             return
         }
         
