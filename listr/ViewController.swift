@@ -52,7 +52,10 @@ class ViewController: UIViewController {
         }
         
         groceryItem.addItem(text)
-        tableView.reloadData() 
+        
+        tableView.reloadData()
+        
+        itemTextField.text = nil
     }
 }
 
