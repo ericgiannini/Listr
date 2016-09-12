@@ -19,9 +19,10 @@ class GroceryItem: NSObject {
         items.append(item)
     }
     
-    extension GroceryItem: UITableViewDataSource {
+}
+
+extension GroceryItem : UITableViewDataSource {
     
-    
-    }
     
 }
+    
