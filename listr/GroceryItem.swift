@@ -17,5 +17,11 @@ class GroceryItem: NSObject {
     // A function for adding GroceryItems to the list
     func addItem(item: String) {
         items.append(item)
-    } 
+    }
+    
+    extension GroceryItem: UITableViewDataSource {
+    
+    
+    }
+    
 }
