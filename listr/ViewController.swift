@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableViewFromStoryboard: UITableView!
+
+    @IBOutlet weak var tableView: UITableView!
     
     let testOfCustomizedSlot = ["slot1", "slot2", "slot3"]
     
