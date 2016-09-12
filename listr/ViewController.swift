@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
     
     
     
@@ -21,10 +21,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let groceryItem = GroceryItem()
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "customizedSlot")
+        
+        tableView.dataSource = groceryItem
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,18 +43,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testOfCustomizedSlot.count
-    }
-
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("customizedSlot", forIndexPath: indexPath) 
-        
-        cell.textLabel?.text = testOfCustomizedSlot[indexPath.item]
-        
-        return cell
-    }
 
     
     @IBAction func addButtonPressed(sender: UIButton) {
@@ -57,7 +51,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         
-        groceryItem.addItem(text) 
+        groceryItem.addItem(text)
+        tableView.reloadData() 
     }
 }
 
