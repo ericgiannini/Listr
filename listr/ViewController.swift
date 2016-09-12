@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
+    
     
     @IBOutlet weak var itemTextField: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     
     let testOfCustomizedSlot = ["slot1", "slot2", "slot3"]
+    
+    let groceryItem = GroceryItem()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +53,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func addButtonPressed(sender: UIButton) {
         
-        if (itemTextField.text! != "") {
-            print("Add to-do item: \(itemTextField.text)")
-        } else {
-            print("There is no item.")
+        guard let text = itemTextField.text else {
+            return
         }
+        
+        groceryItem.addItem(text) 
     }
 }
 
